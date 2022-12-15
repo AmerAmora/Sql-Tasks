@@ -48,8 +48,10 @@ namespace _14_12
                     DropDownList1.Items.FindByValue(read[6].ToString()).Selected = true;
                     string image= $"Images/{read[5].ToString()}";
                     image1.Src= image;
+                    Session["Image"] = read[5].ToString();
 
                 }
+               
 
                 connection.Close();
             }
@@ -76,9 +78,22 @@ namespace _14_12
             SqlConnection connection =
             new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = 14-12 ; integrated security=SSPI");
             connection.Open();
-            string folderPath = Server.MapPath("~/Images/");
-            FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
-            string query = $"update customers set first_name='{Text1.Value}',last_name='{Text2.Value}',phone='{Text3.Value}',email='{Text4.Value}',user_image='{FileUpload1.FileName}',city_id={DropDownList1.SelectedValue} where customer_id={id}";
+            
+            string filelocation = "";
+            if (FileUpload1.HasFile) {
+                string fullPath = Server.MapPath("Images/")+FileUpload1.FileName;
+                filelocation = FileUpload1.FileName;
+                FileUpload1.SaveAs(fullPath);
+               
+            }
+
+            else
+            {
+                filelocation = Session["Image"].ToString();
+            }
+            string query = $"update customers set first_name='{Text1.Value}',last_name='{Text2.Value}',phone='{Text3.Value}',email='{Text4.Value}',user_image='{filelocation}',city_id={DropDownList1.SelectedValue} where customer_id={id}";
+            
+            
             SqlCommand command = new SqlCommand(query, connection); ;
          
             command.ExecuteNonQuery();
