@@ -14,7 +14,7 @@ namespace _14_12
     public partial class Edit : System.Web.UI.Page
     {
             protected void Page_Load(object sender, EventArgs e)
-        {
+            {
             if (!IsPostBack)
             {
                 int id = Convert.ToInt32(Request.QueryString["id"]);
@@ -26,7 +26,7 @@ namespace _14_12
 
                 SqlCommand comand = new SqlCommand(query, connection);
                 SqlCommand command = new SqlCommand("select * from city", connection);
-                SqlDataReader read = comand.ExecuteReader();
+                
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
                 adapt.Fill(dt);
@@ -34,15 +34,19 @@ namespace _14_12
                 DropDownList1.DataTextField = "city_name";
                 DropDownList1.DataValueField = "city_id";
                 DropDownList1.DataBind();
-               
+
+
+                SqlDataReader read = comand.ExecuteReader();
 
                 while (read.Read())
+
                 {
                     Text1.Value = read[1].ToString();
                     Text2.Value = read[2].ToString();
                     Text3.Value = read[3].ToString();
                     Text4.Value = read[4].ToString();
                     DropDownList1.Items.FindByValue(read[6].ToString()).Selected = true;
+
                 }
 
                 connection.Close();
