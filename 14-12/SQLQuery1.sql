@@ -7,3 +7,4 @@ CREATE TABLE customers (
 	user_image varchar(255)
 );
 select * from customers;
+select * from city;
