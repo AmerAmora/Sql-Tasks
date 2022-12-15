@@ -67,6 +67,7 @@ namespace _14_12
             SqlCommand com= new SqlCommand(query, connection);
             com.ExecuteNonQuery();
             connection.Close();
+            Response.Redirect("14-12.aspx");
          }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -82,6 +83,8 @@ namespace _14_12
          
             command.ExecuteNonQuery();
             connection.Close();
+            Response.Redirect("14-12.aspx");
+
         }
     }
 }
