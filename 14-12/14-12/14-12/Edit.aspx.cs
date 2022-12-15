@@ -46,6 +46,8 @@ namespace _14_12
                     Text3.Value = read[3].ToString();
                     Text4.Value = read[4].ToString();
                     DropDownList1.Items.FindByValue(read[6].ToString()).Selected = true;
+                    string image= $"Images/{read[5].ToString()}";
+                    image1.Src= image;
 
                 }
 
@@ -77,8 +79,7 @@ namespace _14_12
             FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
             string query = $"update customers set first_name='{Text1.Value}',last_name='{Text2.Value}',phone='{Text3.Value}',email='{Text4.Value}',user_image='{FileUpload1.FileName}',city_id={DropDownList1.SelectedValue} where customer_id={id}";
             SqlCommand command = new SqlCommand(query, connection); ;
-           
-           
+         
             command.ExecuteNonQuery();
             connection.Close();
         }

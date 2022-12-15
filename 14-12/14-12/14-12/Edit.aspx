@@ -24,7 +24,7 @@
         <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
         <br />
         <label> Image: </label>
-             
+        <img runat="server" src="#" id="image1">
         <asp:FileUpload ID="FileUpload1" runat="server" />
         <asp:Button ID="Button1" runat="server" Text="Edit" OnClick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="Delete" OnClick="Button2_Click" />
