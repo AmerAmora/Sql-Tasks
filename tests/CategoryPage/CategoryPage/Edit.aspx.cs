@@ -16,7 +16,7 @@ namespace CategoryPage
             {
                 int id = Convert.ToInt32(Request.QueryString["id"]);
                 SqlConnection connection =
-            new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+            new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
                 connection.Open();
                 string query = $"select * from category where category_id={id}";
                 SqlCommand comand = new SqlCommand(query, connection);
@@ -41,7 +41,7 @@ namespace CategoryPage
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
             SqlConnection connection =
-            new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+            new SqlConnection("data source =DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
 
             string filelocation = "";

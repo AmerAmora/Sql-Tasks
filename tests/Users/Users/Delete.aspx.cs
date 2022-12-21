@@ -15,7 +15,7 @@ namespace Users
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
             SqlConnection connection =
-        new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+        new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
 
             string query = $"" +
@@ -44,7 +44,7 @@ namespace Users
         protected void Delete_button(object sender, EventArgs e)
         {
             SqlConnection connection =
-            new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+            new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
             int id = Convert.ToInt32(Request.QueryString["id"]);
             string query = $"delete from users where userid={id}";

@@ -16,7 +16,7 @@ namespace Users
         {
             if (!IsPostBack)
             {
-                SqlConnection connection = new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+                SqlConnection connection = new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
                 connection.Open();
                 SqlCommand command = new SqlCommand("select * from city", connection);
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
@@ -54,11 +54,11 @@ namespace Users
             }
             FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
             SqlConnection connection =
-           new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+           new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
             string query = 
                 $"insert into users " +
-                $"values('{email.Text}','{pass.Text}','{firstName.Text}','{lastName.Text}','{phone.Text}',{City.SelectedValue},{Role.SelectedValue},'{FileUpload1.FileName}')";
+                $"values('{email.Text}','{pass.Value}','{firstName.Text}','{lastName.Text}','{phone.Text}',{City.SelectedValue},{Role.SelectedValue},'{FileUpload1.FileName}')";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 connection.Close();

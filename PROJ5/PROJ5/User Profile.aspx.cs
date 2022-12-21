@@ -21,7 +21,7 @@ namespace WebApplication3
             int id = 1;
             if (!IsPostBack)
             {
-                SqlConnection connection = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+                SqlConnection connection = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
                 connection.Open();
                 SqlCommand comand = new SqlCommand($"select*from users where USerid='{id}'", connection);
                 SqlCommand command = new SqlCommand("select * from city", connection);
@@ -54,7 +54,7 @@ namespace WebApplication3
         protected void Save_Click(object sender, EventArgs e)
         {
             int id = 1;
-            SqlConnection connection = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection connection = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
             connection.Open(); 
             string query = $"update users set  EMAIL='{email.Value}',pass='{Password.Value}',First_name='{firstName.Value}',Last_Name='{lastName.Value}' ,PHONE='{phone.Value}',city_Id='{City.SelectedValue}',user_PICTURE='{Session["Imagealt"]}' where USerid={id}";
             
@@ -68,7 +68,7 @@ namespace WebApplication3
             if (FileUpload1.HasFile)
             {
 
-                SqlConnection connection = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+                SqlConnection connection = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
                 connection.Open();
 
                 string folderpath = Server.MapPath("~/iamges/");

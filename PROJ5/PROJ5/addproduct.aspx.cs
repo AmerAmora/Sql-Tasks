@@ -15,7 +15,7 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection conn = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
 
             SqlCommand command = new SqlCommand("select  category_id,category_name from category", conn);
             conn.Open();
@@ -35,7 +35,7 @@ namespace WebApplication3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection connection = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
             connection.Open();
             string query = $"insert into product(product_name,prodct_price,quantity,detalis,sale,category_id,product_PICTURE) values('{tbproductname.Text}','{tbproductprice.Text}','{tbquantity.Text}','{tbdetails.Text}','{tbsale.Text}','{drcategoryname.SelectedValue}',='{Session["image"].ToString()}')";
             SqlCommand command = new SqlCommand($"insert into product(product_name,prodct_price,quantity,detalis,sale,category_id,product_PICTURE,author) values('{tbproductname.Text}','{tbproductprice.Text}','{tbquantity.Text}','{tbdetails.Text}','{tbsale.Text}','{drcategoryname.SelectedValue}','{Session["image"].ToString()}','{tbauthor.Text}');", connection);
@@ -47,7 +47,7 @@ namespace WebApplication3
 
         protected void btnupload_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection connection = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
             connection.Open();
 
             string folderpath = Server.MapPath("~/iamges/");

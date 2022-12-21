@@ -12,7 +12,7 @@ namespace PROJ5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection conn = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
            
             string commm = $"Insert into contacus (fname,lname,sub,phone,detail) Values ('{Fname.Text}','{Lname.Text}','{Subject.Text}','{Number.Text}','{bigbox.Text}')";
             SqlCommand com = new SqlCommand(commm, conn);

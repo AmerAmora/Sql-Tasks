@@ -27,7 +27,7 @@ namespace my_log_in
             int phone1 = Convert.ToInt32(phone);
             int city = Convert.ToInt32(DropDownList1.SelectedValue);
             string pic = FileUpload1.FileName;
-            SqlConnection connection = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection connection = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
             SqlCommand command1 = new SqlCommand($"select Userid from Users WHERE EMAIL='{email}';", connection);
             SqlCommand command2 = new SqlCommand($"insert into users values ('{email}' , '{pass}', ' {first}' , '{last}' , '{phone}' , {city} , 1 ,'{pic}' );", connection);
 

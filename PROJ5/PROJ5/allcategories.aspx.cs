@@ -12,7 +12,7 @@ namespace PROJ5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection CONN = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection CONN = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
             SqlCommand command = new SqlCommand("SELECT  * FROM category", CONN);
 
             CONN.Open();

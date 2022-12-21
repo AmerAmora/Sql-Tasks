@@ -16,7 +16,7 @@ namespace Users
 
             int id = Convert.ToInt32(Request.QueryString["id"]);
             SqlConnection connection =
-        new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+        new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
 
             string query = $"select * from users where userid={id}";
@@ -46,7 +46,7 @@ namespace Users
 
             {
                 email.Text = read[1].ToString();
-                pass.Text = read[2].ToString();
+                pass.Value = read[2].ToString();
                 firstName.Text = read[3].ToString();
                 lastName.Text = read[4].ToString();
                 phone.Text = read[5].ToString();
@@ -54,7 +54,7 @@ namespace Users
                 Role.Items.FindByValue(read[7].ToString()).Selected = true;
                 string image = $"Images/{read[8].ToString()}";
                 image1.Src = image;
-                Session["Image"] = read[5].ToString();
+                Session["Image"] = read[8].ToString();
 
             }
 
@@ -69,7 +69,7 @@ namespace Users
 
             int id = Convert.ToInt32(Request.QueryString["id"]);
             SqlConnection connection =
-            new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+            new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
 
             string filelocation = "";
@@ -85,7 +85,7 @@ namespace Users
             {
                 filelocation = Session["Image"].ToString();
             }
-            string query = $"update USERS set EMAIL='{email.Text}',pass='{pass.Text}',first_name='{firstName.Text}'" +
+            string query = $"update USERS set EMAIL='{email.Text}',pass='{pass.Value}',first_name='{firstName.Text}'" +
                 $",last_name='{lastName.Text}',phone='{phone.Text}',city_id={City.SelectedValue},role_id={Role.SelectedValue},user_PICTURE='{filelocation}'  where userid={id}";
             SqlCommand command = new SqlCommand(query, connection);
 

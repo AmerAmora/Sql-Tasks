@@ -39,7 +39,7 @@ namespace Users
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox pass;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword pass;
 
         /// <summary>
         /// firstName control.
@@ -87,15 +87,6 @@ namespace Users
         protected global::System.Web.UI.WebControls.DropDownList Role;
 
         /// <summary>
-        /// image1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage image1;
-
-        /// <summary>
         /// FileUpload1 control.
         /// </summary>
         /// <remarks>
@@ -103,6 +94,15 @@ namespace Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+
+        /// <summary>
+        /// image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage image1;
 
         /// <summary>
         /// btnUpload control.

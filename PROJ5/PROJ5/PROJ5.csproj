@@ -80,6 +80,7 @@
     <Content Include="CSS\Deleteproduct.css" />
     <Content Include="CSS\Editproduct.css" />
     <Content Include="CSS\Product.css" />
+    <Content Include="CSS\sales.css" />
     <Content Include="CSS\userprofile.css" />
     <Content Include="CSS\ViewSales.css" />
     <Content Include="DeleteCat.aspx" />

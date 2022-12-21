@@ -14,7 +14,7 @@ namespace CategoryPage
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
             SqlConnection connection =
-        new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+        new SqlConnection("data source = DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
 
             string query = $"select * from category where category_id={id}";
@@ -34,7 +34,7 @@ namespace CategoryPage
         protected void Delete_button(object sender, EventArgs e)
         {
             SqlConnection connection =
-            new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+            new SqlConnection("data source =DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
             int id = Convert.ToInt32(Request.QueryString["id"]);
             string query = $"delete from category where category_id={id}";

@@ -4,26 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="../CSS/Addproduct.css"/>
+ <link rel="stylesheet" href="../CSS/Deleteproduct.css"/>
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <title>Add Book</title>
+   
     
-     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../CSS/Deleteproduct.css"/>
+    <title>Add Book</title>
+     <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="../../vendors/base/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- inject:css -->
+   <link rel="stylesheet" href="../CSS/Deleteproduct.css"/>
   <link rel="stylesheet" href="../../css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
   <script src="https://kit.fontawesome.com/e869edadc1.js" crossorigin="anonymous"></script>
+    
 
 </head>
 <body>
@@ -87,7 +84,7 @@
                   <div class="table-responsive">    
     <form id="form1" runat="server">
 <div class="w3-container w3-center w3-animate-right">
-  <h1>ADD NEW BOOK</h1>
+  <h4>ADD NEW BOOK</h4>
     </div>
         <div>
             <div class="containerdiv">

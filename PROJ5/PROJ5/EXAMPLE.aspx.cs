@@ -36,7 +36,7 @@ namespace PROJ5
 
 
 
-            SqlConnection CONN = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection CONN = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
             SqlCommand command = new SqlCommand("SELECT TOP 4 * FROM category", CONN);
      
             CONN.Open();
@@ -172,7 +172,7 @@ CONN.Close();
             string FILE = Server.MapPath("~/picture");
             string folderpic = Session["file"].ToString();
            
-            SqlConnection CONN = new SqlConnection("data source= DESKTOP-8NTQ6AN\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
+            SqlConnection CONN = new SqlConnection("data source= DESKTOP-VTV6FAK\\SQLEXPRESS;database=LibraryStore;Integrated security=SSPI");
 
             SqlCommand command = new SqlCommand($"insert into product (product_name,product_PICTURE,category_id,prodct_price,quantity,detalis,sale) " +
                 $"values ('romance quartet','{folderpic}',{3},{7},{10},' WANT IT',{5})",CONN);

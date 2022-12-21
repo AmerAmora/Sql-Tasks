@@ -31,7 +31,7 @@ namespace CategoryPage
             FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
 
             SqlConnection connection =
-            new SqlConnection("data source = DESKTOP-8NTQ6AN\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
+            new SqlConnection("data source =DESKTOP-VTV6FAK\\SQLEXPRESS; database = LibraryStore ; integrated security=SSPI");
             connection.Open();
             string query = $"insert into category values('{Category_Name.Text}','{FileUpload1.FileName}')";
             SqlCommand command = new SqlCommand(query, connection);
