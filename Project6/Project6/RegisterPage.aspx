@@ -68,14 +68,25 @@ justify-content: center;">
                      <asp:RequiredFieldValidator runat="server" ControlToValidate="Phone"
                     CssClass="text-danger" ErrorMessage="The email field is required." />
                 </div>
-                     <div class="form-group first">
-                  <label for="Phone">City</label>
-                         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-                      <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                    <div class="form-group first">
+                  <label for="Phone">Date of birth</label>
+                        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                      <asp:RequiredFieldValidator runat="server" ControlToValidate="Phone"
                     CssClass="text-danger" ErrorMessage="The email field is required." />
                 </div>
-                <asp:Button ID="Button2" class="btn " style="float: right; color:  white; background-color: #45B08E;" OnClick="CreateUser_Click" runat="server" Text="Button" />
+                     <div class="form-group first">
+                  <label for="Phone">City</label>
+                           <asp:DropDownList ID="City" runat="server" DataSourceID="SqlDataSource1" DataTextField="city_name" DataValueField="city_id"></asp:DropDownList>
+
+                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [city]"></asp:SqlDataSource>
+                </div>
+                    <div class="form-group first">
+                  <label for="Pfp">Profile Picture</label>
+                  <asp:FileUpload id="FileUpload1" runat="server" cssclass="fileupload"/>
+
+                    </div>
+
+                <asp:Button ID="Button2" class="btn " style="float: right; color:  white; background-color: #45B08E;" OnClick="Register" runat="server" Text="Register" />
                 </asp:PlaceHolder>
 <%--                End of personal Info--%>
                     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
@@ -105,7 +116,7 @@ justify-content: center;">
                 <div class="d-sm-flex mb-5 align-items-center">
                   <span class="ml-auto"><a href="#" class="forgot-pass">Have an account? Login</a></span> 
                 </div>
-                <asp:Button ID="Button1" class="btn " style="float: right; color:  white; background-color: #45B08E;" OnClick="CreateUser_Click" runat="server" Text="Button" />
+                <asp:Button ID="Button1" class="btn " style="float: right; color:  white; background-color: #45B08E;" OnClick="CreateUser_Click" runat="server" Text="Next" />
                 </asp:PlaceHolder>
             </div>
                
@@ -117,8 +128,8 @@ justify-content: center;">
         </div>
       </div>
     </div>
+                              
 
-    
   </div>
     </form>
 </body>
